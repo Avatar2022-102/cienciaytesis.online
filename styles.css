@@ -263,3 +263,47 @@ footer {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    /* Ajustes para la navegación */
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .nav ul li {
+        margin-left: 0;
+    }
+
+    /* Ajustes para la sección de contacto */
+    .contact-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-options .btn,
+    .contact-options .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Ajustes para la sección "Nosotros" */
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Ajustes generales para el texto */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
