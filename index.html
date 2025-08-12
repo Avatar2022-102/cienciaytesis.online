@@ -1,504 +1,522 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Padrón & Asociados — Tesis, Artículos Científicos y Asesoría Estadística</title>
-  <meta name="description" content="Asesoría académica profesional para tesis, artículos científicos, análisis estadístico, publicaciones y desarrollo de investigación." />
-  <meta name="robots" content="index,follow" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Padrón & Asociados — Tesis, Artículos Científicos y Asesoría Estadística</title>
+    <meta name="description" content="Asesoría académica profesional para tesis, artículos científicos, análisis estadístico, publicaciones y desarrollo de investigación.">
+    <meta name="robots" content="index, follow">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Padrón & Asociados — Tesis, Artículos Científicos y Asesoría Estadística" />
-  <meta property="og:description" content="Asesoría académica profesional para tesis, artículos científicos, análisis estadístico, publicaciones y desarrollo de investigación." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://cienciaytesis.online" />
-  <meta property="og:image" content="https://cienciaytesis.online/assets/img/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="Padrón & Asociados — Tesis, Artículos Científicos y Asesoría Estadística">
+    <meta property="og:description" content="Asesoría académica profesional para tesis, artículos científicos, análisis estadístico, publicaciones y desarrollo de investigación.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cienciaytesis.online">
+    <meta property="og:image" content="https://cienciaytesis.online/assets/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
-  <link rel="icon" href="assets/img/favicon.png" sizes="512x512" />
-  <link rel="mask-icon" href="assets/img/logo-pa.svg" color="#28a745" />
-  <meta name="theme-color" content="#0b1220" />
+    <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+    <link rel="icon" href="assets/img/favicon.png" sizes="512x512">
+    <link rel="mask-icon" href="assets/img/logo-pa.svg" color="#28a745">
+    <meta name="theme-color" content="#0b1220">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- AOS (scroll animations) -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- Swiper (testimonios / carruseles) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 
-  <style>
-    :root{
-      --brand:#2563eb; /* Azul primario */
-      --brand-2:#0ea5e9; /* Azul claro */
-      --dark:#0b1220;    /* Fondo oscuro */
-      --muted:#6b7280;   /* Texto secundario */
-    }
-    html,body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:#0f172a;}
-    .btn-brand{background:var(--brand); border:none; color:#fff;}
-    .btn-brand:hover{background:#1e40af; color:#fff;}
-    .badge-soft{background:rgba(37,99,235,.1); color:var(--brand);}
+    <style>
+        :root {
+            --brand: #2563eb;
+            --brand-2: #0ea5e9;
+            --dark: #0b1220;
+            --muted: #6b7280;
+        }
 
-    /* Hero */
-    .hero{
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(14,165,233,.20), transparent 60%),
-                  radial-gradient(800px 400px at 10% -20%, rgba(37,99,235,.18), transparent 50%),
-                  linear-gradient(180deg, #ffffff, #f8fafc);
-    }
-    .hero h1{font-family:Montserrat, Inter, sans-serif; font-weight:800; letter-spacing:-.02em;}
+        html, body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+            color: #0f172a;
+        }
 
-    /* Cards */
-    .feature-card{ border:1px solid #e5e7eb; border-radius:1rem; transition:all .2s ease; background:#fff;}
-    .feature-card:hover{ transform:translateY(-4px); box-shadow:0 10px 30px rgba(2,6,23,.08);}
+        .btn-brand {
+            background: var(--brand);
+            border: none;
+            color: #fff;
+        }
 
-    /* Section titles */
-    .section-title{font-family:Montserrat, Inter, sans-serif; font-weight:700; letter-spacing:-.01em;}
-    .subtitle{color:var(--muted);}
+        .btn-brand:hover {
+            background: #1e40af;
+            color: #fff;
+        }
 
-    /* Footer */
-    footer{background:var(--dark); color:#cbd5e1;}
-    footer a{color:#a5b4fc; text-decoration:none}
-    footer a:hover{color:#fff}
+        .badge-soft {
+            background: rgba(37, 99, 235, .1);
+            color: var(--brand);
+        }
 
-    /* Utilities */
-    .shadow-soft{box-shadow:0 8px 24px rgba(2,6,23,.06)}
-    .rounded-2xl{border-radius:1rem}
-  </style>
+        .hero {
+            background: radial-gradient(1200px 600px at 80% -10%, rgba(14, 165, 233, .20), transparent 60%), radial-gradient(800px 400px at 10% -20%, rgba(37, 99, 235, .18), transparent 50%), linear-gradient(180deg, #ffffff, #f8fafc);
+        }
 
-  <!-- Structured Data (Organization) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Padrón & Asociados",
-    "url": "https://cienciaytesis.online",
-    "logo": "https://cienciaytesis.online/assets/img/favicon.png",
-    "sameAs": [
-      "https://www.instagram.com/richardrodriguez.p"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "tesis.padron.acad@gmail.com",
-      "contactType": "customer support",
-      "areaServed": "UY",
-      "availableLanguage": ["es"]
-    }
-  }
-  </script>
+        .hero h1 {
+            font-family: Montserrat, Inter, sans-serif;
+            font-weight: 800;
+            letter-spacing: -.02em;
+        }
+
+        .feature-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            transition: all .2s ease;
+            background: #fff;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(2, 6, 23, .08);
+        }
+
+        .section-title {
+            font-family: Montserrat, Inter, sans-serif;
+            font-weight: 700;
+            letter-spacing: -.01em;
+        }
+
+        .subtitle {
+            color: var(--muted);
+        }
+
+        footer {
+            background: var(--dark);
+            color: #cbd5e1;
+        }
+
+        footer a {
+            color: #a5b4fc;
+            text-decoration: none
+        }
+
+        footer a:hover {
+            color: #fff
+        }
+
+        .shadow-soft {
+            box-shadow: 0 8px 24px rgba(2, 6, 23, .06)
+        }
+
+        .rounded-2xl {
+            border-radius: 1rem
+        }
+    </style>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Padrón & Asociados",
+            "url": "https://cienciaytesis.online",
+            "logo": "https://cienciaytesis.online/assets/img/favicon.png",
+            "sameAs": [
+                "https://www.instagram.com/richardrodriguez.p"
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "tesis.padron.acad@gmail.com",
+                "contactType": "customer support",
+                "areaServed": "UY",
+                "availableLanguage": ["es"]
+            }
+        }
+    </script>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom shadow-sm">
-    <div class="container py-2">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img src="assets/img/favicon.png" alt="Logo" width="32" height="32" />
-        <strong>Padrón &amp; Asociados</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-        <a class="btn btn-brand ms-lg-3" href="https://wa.me/59800000000" target="_blank" rel="noopener">Whatsapp</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header id="hero" class="hero py-5 py-lg-6">
-    <div class="container py-4">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-          <span class="badge badge-soft px-3 py-2 rounded-pill mb-3">Tesis • Artículos • Estadística</span>
-          <h1 class="display-5 mb-4">Expertos en investigación académica y <span class="text-primary">asesoría científica</span>.</h1>
-          <p class="lead subtitle">Te acompañamos desde la idea hasta la publicación: diseño metodológico, análisis estadístico (SPSS/R/Stata), redacción y postulación en revistas (Scopus/WoS).</p>
-          
-          <div class="d-flex gap-2 mt-4">
-            <a href="#servicios" class="btn btn-brand btn-lg">Ver servicios</a>
-            <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener"
-               class="btn btn-outline-success btn-lg">
-               <!-- opcional: icono -->
-               WhatsApp
-              </a>
-           </div>
-          <div class="d-flex align-items-center gap-3 mt-4 text-muted small">
-            <div>🎓 Acompañamiento integral</div>
-            <div>📊 Reportes y gráficas</div>
-            <div>📰 Enfoque a publicación</div>
-          </div>
-        </div>
-        <!-- Imagen -->
-          <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/img/cienciaytesis.png" 
-              alt="Investigación Académica - Padrón & Asociados" 
-              title="Padrón & Asociados - Investigación Académica"
-              class="img-fluid rounded shadow-sm d-block mx-auto" 
-              style="max-block-size: 400px; inline-size: auto; border-radius: 20px; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Servicios -->
-  <section id="servicios" class="py-5">
-    <div class="container">
-      <div class="text-center mb-4" data-aos="fade-up">
-        <h2 class="section-title">Nuestros Servicios Académicos</h2>
-        <p class="subtitle">Soluciones a medida para tu tesis, artículo o proyecto de investigación.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
-          <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📚</div>
-            <h5>Asesoría de Tesis</h5>
-            <p class="text-secondary">Plan, cronograma, marco teórico, metodología, resultados y defensa.</p>
-            <ul class="text-secondary small mb-3">
-              <li>Estructura y normas</li>
-              <li>Revisión por pares</li>
-              <li>Acompañamiento 1:1</li>
-            </ul>
-            <a class="stretched-link" href="#contacto">Solicitar</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📈</div>
-            <h5>Análisis Estadístico</h5>
-            <p class="text-secondary">SPSS, R y Stata: diseño experimental, ANOVA, regresiones, PCA/CCA, RDA.</p>
-            <ul class="text-secondary small mb-3">
-              <li>Gráficos publicables</li>
-              <li>Informe reproducible</li>
-              <li>Soporte de interpretación</li>
-            </ul>
-            <a class="stretched-link" href="#contacto">Solicitar</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📝</div>
-            <h5>Redacción y Edición</h5>
-            <p class="text-secondary">Estilo científico, inglés/español, normas APA/IEEE/Vancouver.</p>
-            <ul class="text-secondary small mb-3">
-              <li>Corrección de estilo</li>
-              <li>Formateo y referencias</li>
-              <li>Respuesta a revisores</li>
-            </ul>
-            <a class="stretched-link" href="#contacto">Solicitar</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-          <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📰</div>
-            <h5>Publicación</h5>
-            <p class="text-secondary">Selección de revista, carta al editor, check de requisitos y envío.</p>
-            <ul class="text-secondary small mb-3">
-              <li>Scopus / WoS</li>
-              <li>Turnitin / antiplagio</li>
-              <li>Checklist editorial</li>
-            </ul>
-            <a class="stretched-link" href="#contacto">Solicitar</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Nosotros -->
-  <section id="nosotros" class="py-5 bg-light">
-    <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="section-title mb-3">Sobre Padrón &amp; Asociados</h2>
-          <p class="subtitle">Equipo multidisciplinario con trayectoria en ciencias agrarias, ambientales y salud.</p>
-          <p>Trabajamos con rigor metodológico y enfoque en resultados publicables. Integramos estadística avanzada con redacción científica para entregar documentos listos para evaluación académica o envío a revista.</p>
-          <div class="d-flex gap-3 mt-3">
-            <span class="badge bg-success-subtle text-success">+10 años</span>
-            <span class="badge bg-primary-subtle text-primary">Normas internacionales</span>
-            <span class="badge bg-warning-subtle text-warning">Acompañamiento cercano</span>
-          </div>
-        </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <img src="assets/img/cienciaytesis1.gif" 
-                alt="Animación científica Padrón & Asociados" 
-                class="img-fluid rounded-3 shadow-sm d-block mx-auto" 
-                style="max-block-size: 400px; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Impacto / Métricas -->
-  <section id="impacto" class="py-5">
-    <div class="container">
-      <div class="text-center mb-4" data-aos="fade-up">
-        <h2 class="section-title">Impacto</h2>
-        <p class="subtitle">Algunas métricas de proyectos recientes.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-3" data-aos="zoom-in">
-          <div class="feature-card p-4 text-center">
-            <div class="display-6">98</div>
-            <p class="mb-0 text-secondary">Páginas publicadas</p>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="feature-card p-4 text-center">
-            <div class="display-6">+65%</div>
-            <p class="mb-0 text-secondary">Mejora en velocidad</p>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="feature-card p-4 text-center">
-            <div class="display-6">4.8★</div>
-            <p class="mb-0 text-secondary">Satisfacción</p>
-          </div>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
-          <div class="feature-card p-4 text-center">
-            <div class="display-6">24/7</div>
-            <p class="mb-0 text-secondary">Monitoreo</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5" data-aos="fade-right">
-          <h2 class="section-title">Testimonios</h2>
-          <p class="subtitle">Lo que dicen nuestros clientes.</p>
-        </div>
-        <div class="col-lg-7" data-aos="fade-left">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="feature-card p-4">
-                  <p class="mb-2">“Me asesoraron en el análisis estadístico de mi tesis. Los resultados son impecables y pude terminar a tiempo.”</p>
-                  <div class="small text-secondary">— Ana G.</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="feature-card p-4">
-                  <p class="mb-2">“Gracias al equipo, logré publicar mi artículo en una revista importante. Su ayuda fue excelente.”</p>
-                  <div class="small text-secondary">— Ricardo V.</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="feature-card p-4">
-                  <p class="mb-2">“La traducción al inglés de mi manuscrito quedó super bien. Se notó el rigor en la terminología técnica.”</p>
-                  <div class="small text-secondary">— Sofía P.</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="feature-card p-4">
-                  <p class="mb-2">“Su apoyo fue clave. Con su guía, conseguí entregar mi tesis en la fecha límite sin problemas.”</p>
-                  <div class="small text-secondary">— Carlos M.</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="feature-card p-4">
-                  <p class="mb-2">“The advice was spot on, and the statistical analysis was very clear. I will definitely work with them again.”</p>
-                  <div class="small text-secondary">— John H.</div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="feature-card p-4">
-                  <p class="mb-2">“A equipe é muito profissional e dedicada. Conseguimos terminar a minha tese em tempo recorde. Recomendo!”</p>
-                  <div class="small text-secondary">— Bianca L.</div>
-                </div>
-              </div>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom shadow-sm">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="assets/img/favicon.png" alt="Logo" width="32" height="32">
+                <strong>Padrón &amp; Asociados</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+                <a class="btn btn-brand ms-lg-3" href="https://wa.me/59800000000" target="_blank" rel="noopener">Whatsapp</a>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Cursos / Productos -->
-  <section id="cursos" class="py-5">
-    <div class="container">
-      <div class="text-center mb-4" data-aos="fade-up">
-        <h2 class="section-title">Cursos y Recursos</h2>
-        <p class="subtitle">Capacitación práctica y materiales descargables.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-          <div class="feature-card p-4 h-100">
-            <h5>Curso: Presencia Web Efectiva</h5>
-            <p class="text-secondary">Desde cero a tu primera landing optimizada.</p>
-            <a class="btn btn-sm btn-brand" href="#contacto">Quiero más info</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="feature-card p-4 h-100">
-            <h5>Pack de Plantillas</h5>
-            <p class="text-secondary">Componentes y secciones listas para usar.</p>
-            <a class="btn btn-sm btn-brand" href="#contacto">Solicitar</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="feature-card p-4 h-100">
-            <h5>Auditoría SEO</h5>
-            <p class="text-secondary">Informe técnico y plan de mejoras.</p>
-            <a class="btn btn-sm btn-brand" href="#contacto">Cotizar</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="py-5 bg-light">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="section-title mb-3">Contacto</h2>
-          <p class="subtitle">Escríbenos por WhatsApp o completa el formulario.</p>
-          <div class="d-flex gap-2 mb-3">
-            <a class="btn btn-brand" href="https://wa.me/tunumerodetelefono?text=Hola%20quiero%20asesor%C3%ADa%20acad%C3%A9mica" target="_blank" rel="noopener">WhatsApp directo</a>
-            <a class="btn btn-outline-primary" href="mailto:tesis.padron.acad@gmail.com">Email</a>
-          </div>
-          <ul class="list-unstyled text-secondary small">
-            <li>✔️ Respuesta en el día</li>
-            <li>✔️ Presupuesto claro</li>
-            <li>✔️ Entrega con documentación</li>
-          </ul>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <form class="feature-card p-4" onsubmit="handleSubmit(event)">
-            <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="name" required />
+    <header id="hero" class="hero py-5 py-lg-6">
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                    <span class="badge badge-soft px-3 py-2 rounded-pill mb-3">Tesis • Artículos • Estadística</span>
+                    <h1 class="display-5 mb-4">Expertos en investigación académica y <span class="text-primary">asesoría científica</span>.</h1>
+                    <p class="lead subtitle">Te acompañamos desde la idea hasta la publicación: diseño metodológico, análisis estadístico (SPSS/R/Stata), redacción y postulación en revistas (Scopus/WoS).</p>
+                    
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="#servicios" class="btn btn-brand btn-lg">Ver servicios</a>
+                        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg">
+                            WhatsApp
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 text-muted small">
+                        <div>🎓 Acompañamiento integral</div>
+                        <div>📊 Reportes y gráficas</div>
+                        <div>📰 Enfoque a publicación</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/img/cienciaytesis.png"
+                        alt="Investigación Académica - Padrón & Asociados"
+                        title="Padrón & Asociados - Investigación Académica"
+                        class="img-fluid rounded shadow-sm d-block mx-auto"
+                        style="max-block-size: 400px; inline-size: auto; border-radius: 20px; object-fit: cover;">
+                </div>
             </div>
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" required />
+        </div>
+    </header>
+
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h2 class="section-title">Nuestros Servicios Académicos</h2>
+                <p class="subtitle">Soluciones a medida para tu tesis, artículo o proyecto de investigación.</p>
             </div>
-            <div class="mb-3">
-              <label class="form-label">Mensaje</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Hola, necesito ayuda con..." required></textarea>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="feature-card p-4 h-100">
+                        <div class="fs-2 mb-3">📚</div>
+                        <h5>Asesoría de Tesis</h5>
+                        <p class="text-secondary">Plan, cronograma, marco teórico, metodología, resultados y defensa.</p>
+                        <ul class="text-secondary small mb-3">
+                            <li>Estructura y normas</li>
+                            <li>Revisión por pares</li>
+                            <li>Acompañamiento 1:1</li>
+                        </ul>
+                        <a class="stretched-link" href="#contacto">Solicitar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-card p-4 h-100">
+                        <div class="fs-2 mb-3">📈</div>
+                        <h5>Análisis Estadístico</h5>
+                        <p class="text-secondary">SPSS, R y Stata: diseño experimental, ANOVA, regresiones, PCA/CCA, RDA.</p>
+                        <ul class="text-secondary small mb-3">
+                            <li>Gráficos publicables</li>
+                            <li>Informe reproducible</li>
+                            <li>Soporte de interpretación</li>
+                        </ul>
+                        <a class="stretched-link" href="#contacto">Solicitar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card p-4 h-100">
+                        <div class="fs-2 mb-3">📝</div>
+                        <h5>Redacción y Edición</h5>
+                        <p class="text-secondary">Estilo científico, inglés/español, normas APA/IEEE/Vancouver.</p>
+                        <ul class="text-secondary small mb-3">
+                            <li>Corrección de estilo</li>
+                            <li>Formateo y referencias</li>
+                            <li>Respuesta a revisores</li>
+                        </ul>
+                        <a class="stretched-link" href="#contacto">Solicitar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-card p-4 h-100">
+                        <div class="fs-2 mb-3">📰</div>
+                        <h5>Publicación</h5>
+                        <p class="text-secondary">Selección de revista, carta al editor, check de requisitos y envío.</p>
+                        <ul class="text-secondary small mb-3">
+                            <li>Scopus / WoS</li>
+                            <li>Turnitin / antiplagio</li>
+                            <li>Checklist editorial</li>
+                        </ul>
+                        <a class="stretched-link" href="#contacto">Solicitar</a>
+                    </div>
+                </div>
             </div>
-            <button class="btn btn-brand" type="submit">Enviar</button>
-            <small class="text-secondary d-block mt-2">Al enviar, se abrirá tu WhatsApp con el mensaje prellenado.</small>
-          </form>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row text-center g-4">
-        <!-- Imagen 1 -->
-        <div class="col-md-4">
-          <img src="assets/img/cienciaytesis1.png" 
-              alt="Investigación Científica 1"
-              class="img-fluid rounded shadow-sm mx-auto d-block"
-              style="max-block-size: 300px; inline-size: auto; object-fit: cover;">
+    <section id="nosotros" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title mb-3">Sobre Padrón &amp; Asociados</h2>
+                    <p class="subtitle">Equipo multidisciplinario con trayectoria en ciencias agrarias, ambientales y salud.</p>
+                    <p>Trabajamos con rigor metodológico y enfoque en resultados publicables. Integramos estadística avanzada con redacción científica para entregar documentos listos para evaluación académica o envío a revista.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <span class="badge bg-success-subtle text-success">+10 años</span>
+                        <span class="badge bg-primary-subtle text-primary">Normas internacionales</span>
+                        <span class="badge bg-warning-subtle text-warning">Acompañamiento cercano</span>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="assets/img/cienciaytesis1.gif"
+                        alt="Animación científica Padrón & Asociados"
+                        class="img-fluid rounded-3 shadow-sm d-block mx-auto"
+                        style="max-block-size: 400px; object-fit: cover;">
+                </div>
+            </div>
         </div>
-        <!-- Imagen 2 -->
-        <div class="col-md-4">
-          <img src="assets/img/cienciaytesis2.png" 
-              alt="Investigación Científica 2"
-              class="img-fluid rounded shadow-sm mx-auto d-block"
-              style="max-block-size: 300px; inline-size: auto; object-fit: cover;">
-        </div>
-        <!-- Imagen 3 -->
-        <div class="col-md-4">
-          <img src="assets/img/cienciaytesis4.png" 
-              alt="Investigación Científica 3"
-              class="img-fluid rounded shadow-sm mx-auto d-block"
-              style="max-block-size: 300px; inline-size: auto; object-fit: cover;">
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-5">
-          <h5>Padrón &amp; Asociados</h5>
-          <p class="mb-2">Tesis, artículos científicos y análisis estadístico.</p>
-          <div class="small">© <span id="year"></span> Padrón &amp; Asociados. Todos los derechos reservados.</div>
+    <section id="impacto" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h2 class="section-title">Impacto</h2>
+                <p class="subtitle">Algunas métricas de proyectos recientes.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="zoom-in">
+                    <div class="feature-card p-4 text-center">
+                        <div class="display-6">98</div>
+                        <p class="mb-0 text-secondary">Páginas publicadas</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-card p-4 text-center">
+                        <div class="display-6">+65%</div>
+                        <p class="mb-0 text-secondary">Mejora en velocidad</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card p-4 text-center">
+                        <div class="display-6">4.8★</div>
+                        <p class="mb-0 text-secondary">Satisfacción</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-card p-4 text-center">
+                        <div class="display-6">24/7</div>
+                        <p class="mb-0 text-secondary">Monitoreo</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-2">
-          <h6>Secciones</h6>
-          <ul class="list-unstyled small">
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h6>Enlaces de Interés</h6>
-          <ul class="list-unstyled small">
-            <li><a href="privacidad.html">Privacidad</a></li>
-            <li><a href="terminos.html">Términos</a></li>
-            <li><a href="cookies.html">Cookies</a></li>
-            <li><a href="aviso-legal.html">Aviso legal</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h6>Contacto</h6>
-          <ul class="list-unstyled small">
-            <li><a href="mailto:tesis.padron.acad@gmail.com">tesis.padron.acad@gmail.com</a></li>
-            <li><a href="https://wa.me/tunumerodetelefono" target="_blank" rel="noopener">WhatsApp</a></li>
-            <li><a href="https://www.instagram.com/richardrodriguez.p" target="_blank" rel="noopener">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script>
-    // Inits
-    AOS.init({
-      duration: 600,
-      easing: 'ease-out-quart',
-      once: true
-    });
-    new Swiper('.mySwiper', {
-      spaceBetween: 24,
-      pagination: { el: '.swiper-pagination', clickable: true },
-      autoplay: { delay: 4500 },
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h2 class="section-title">Testimonios</h2>
+                    <p class="subtitle">Lo que dicen nuestros clientes.</p>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="feature-card p-4">
+                                    <p class="mb-2">“Me asesoraron en el análisis estadístico de mi tesis. Los resultados son impecables y pude terminar a tiempo.”</p>
+                                    <div class="small text-secondary">— Ana G.</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="feature-card p-4">
+                                    <p class="mb-2">“Gracias al equipo, logré publicar mi artículo en una revista importante. Su ayuda fue excelente.”</p>
+                                    <div class="small text-secondary">— Ricardo V.</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="feature-card p-4">
+                                    <p class="mb-2">“La traducción al inglés de mi manuscrito quedó super bien. Se notó el rigor en la terminología técnica.”</p>
+                                    <div class="small text-secondary">— Sofía P.</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="feature-card p-4">
+                                    <p class="mb-2">“Su apoyo fue clave. Con su guía, conseguí entregar mi tesis en la fecha límite sin problemas.”</p>
+                                    <div class="small text-secondary">— Carlos M.</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="feature-card p-4">
+                                    <p class="mb-2">“The advice was spot on, and the statistical analysis was very clear. I will definitely work with them again.”</p>
+                                    <div class="small text-secondary">— John H.</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="feature-card p-4">
+                                    <p class="mb-2">“A equipe é muito profissional e dedicada. Conseguimos terminar a minha tese em tempo recorde. Recomendo!”</p>
+                                    <div class="small text-secondary">— Bianca L.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Simple WhatsApp submit
-    function handleSubmit(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const text = encodeURIComponent(`Hola, soy ${name} (${email}). Quiero una página web. Detalles: ${message}`);
-      const phone = '59800000000'; // <- Reemplazar por tu número con código de país
-      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
-    }
-  </script>
+    <section id="cursos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h2 class="section-title">Cursos y Recursos</h2>
+                <p class="subtitle">Capacitación práctica y materiales descargables.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                    <div class="feature-card p-4 h-100">
+                        <h5>Curso: Presencia Web Efectiva</h5>
+                        <p class="text-secondary">Desde cero a tu primera landing optimizada.</p>
+                        <a class="btn btn-sm btn-brand" href="#contacto">Quiero más info</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-card p-4 h-100">
+                        <h5>Pack de Plantillas</h5>
+                        <p class="text-secondary">Componentes y secciones listas para usar.</p>
+                        <a class="btn btn-sm btn-brand" href="#contacto">Solicitar</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card p-4 h-100">
+                        <h5>Auditoría SEO</h5>
+                        <p class="text-secondary">Informe técnico y plan de mejoras.</p>
+                        <a class="btn btn-sm btn-brand" href="#contacto">Cotizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title mb-3">Contacto</h2>
+                    <p class="subtitle">Escríbenos por WhatsApp o completa el formulario.</p>
+                    <div class="d-flex gap-2 mb-3">
+                        <a class="btn btn-brand" href="https://wa.me/tunumerodetelefono?text=Hola%20quiero%20asesor%C3%ADa%20acad%C3%A9mica" target="_blank" rel="noopener">WhatsApp directo</a>
+                        <a class="btn btn-outline-primary" href="mailto:tesis.padron.acad@gmail.com">Email</a>
+                    </div>
+                    <ul class="list-unstyled text-secondary small">
+                        <li>✔️ Respuesta en el día</li>
+                        <li>✔️ Presupuesto claro</li>
+                        <li>✔️ Entrega con documentación</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form class="feature-card p-4" onsubmit="handleSubmit(event)">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Hola, necesito ayuda con..." required></textarea>
+                        </div>
+                        <button class="btn btn-brand" type="submit">Enviar</button>
+                        <small class="text-secondary d-block mt-2">Al enviar, se abrirá tu WhatsApp con el mensaje prellenado.</small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <img src="assets/img/cienciaytesis1.png" alt="Investigación Científica 1" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size: 300px; inline-size: auto; object-fit: cover;">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/img/cienciaytesis2.png" alt="Investigación Científica 2" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size: 300px; inline-size: auto; object-fit: cover;">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/img/cienciaytesis4.png" alt="Investigación Científica 3" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size: 300px; inline-size: auto; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h5>Padrón &amp; Asociados</h5>
+                    <p class="mb-2">Tesis, artículos científicos y análisis estadístico.</p>
+                    <div class="small">© <span id="year"></span> Padrón &amp; Asociados. Todos los derechos reservados.</div>
+                </div>
+                <div class="col-md-2">
+                    <h6>Secciones</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Enlaces de Interés</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="privacidad.html">Privacidad</a></li>
+                        <li><a href="terminos.html">Términos</a></li>
+                        <li><a href="cookies.html">Cookies</a></li>
+                        <li><a href="aviso-legal.html">Aviso legal</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Contacto</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="mailto:tesis.padron.acad@gmail.com">tesis.padron.acad@gmail.com</a></li>
+                        <li><a href="https://wa.me/tunumerodetelefono" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/richardrodriguez.p" target="_blank" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        // Inits
+        AOS.init({
+            duration: 600,
+            easing: 'ease-out-quart',
+            once: true
+        });
+        new Swiper('.mySwiper', {
+            spaceBetween: 24,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            autoplay: {
+                delay: 4500
+            },
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Simple WhatsApp submit
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const text = encodeURIComponent(`Hola, soy ${name} (${email}). Quiero una página web. Detalles: ${message}`);
+            const phone = '59800000000'; // <- Reemplazar por tu número con código de país
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+    </script>
 </body>
 </html>
