@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .bg { fill: rgb(11, 18, 32); rx: 92; ry: 92; }
+      .accent { fill: rgb(40, 167, 69); }
+      .fg { fill: rgb(255, 255, 255); font: bold 220px sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="512" height="512" rx="92" ry="92" />
+  <text class="fg" x="128" y="250">PA</text>
+  <!-- bars -->
+  <rect class="accent" x="150" y="360" width="28" height="40" rx="10" />
+  <rect class="accent" x="200" y="340" width="28" height="60" rx="10" />
+  <rect class="accent" x="250" y="310" width="28" height="90" rx="10" />
+  <!-- check -->
+  <path class="accent" d="M360 120 L390 160 L440 90" stroke="rgb(40, 167, 69)" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
