@@ -182,7 +182,17 @@
         </ul>
       </section>
 
-      <p class="small muted mt-4" data-aos="fade-up">Dudas sobre esta política: <a href="mailto:tesis.padron.acad@gmail.com">tesis.padron.acad@gmail.com</a></p>
+      <p class="small muted mt-4" data-aos="fade-up">
+        Dudas sobre esta política:
+        <a class="mail-link"
+           href="mailto:tesis.padron.acad@gmail.com?subject=Consulta%20sobre%20Pol%C3%ADtica%20de%20Privacidad&body=Hola%2C%20tengo%20una%20duda%20sobre%20la%20pol%C3%ADtica%3A%20">
+          tesis.padron.acad@gmail.com
+        </a>
+        <span aria-hidden="true"> · </span>
+        <a href="#" class="open-gmail">Gmail</a>
+        <span aria-hidden="true"> · </span>
+        <a href="#" class="copy-mail">Copiar</a>
+      </p>
     </div>
   </main>
 
@@ -219,5 +229,37 @@
     document.getElementById('btn-accept-all').addEventListener('click', acceptAll);
     document.getElementById('btn-reject-all').addEventListener('click', rejectAll);
   </script>
+  <script>
+    (function(){
+      const TO = "tesis.padron.acad@gmail.com";
+      const SUBJECT = "Consulta sobre Política de Cookies";   // <- antes decía “Privacidad”
+      const BODY = "Hola, tengo una duda sobre la política de cookies: "; // <- ajustado
+    
+      document.querySelectorAll('.open-gmail').forEach(el => {
+        el.addEventListener('click', function(e){
+          e.preventDefault();
+          const url = "https://mail.google.com/mail/?view=cm&fs=1"
+            + "&to=" + encodeURIComponent(TO)
+            + "&su=" + encodeURIComponent(SUBJECT)
+            + "&body=" + encodeURIComponent(BODY);
+          window.open(url, "_blank", "noopener,noreferrer");
+        });
+      });
+    
+      document.querySelectorAll('.copy-mail').forEach(el => {
+        el.addEventListener('click', async function(e){
+          e.preventDefault();
+          try {
+            await navigator.clipboard.writeText(TO);
+            const old = el.textContent;
+            el.textContent = "Copiado ✓";
+            setTimeout(()=> el.textContent = old, 1500);
+          } catch {
+            prompt("Copia el correo:", TO);
+          }
+        });
+      });
+    })();
+    </script>
 </body>
 </html>
