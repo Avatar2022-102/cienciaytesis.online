@@ -48,7 +48,7 @@
   <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
   <link rel="icon" href="/assets/img/favicon.png" sizes="512x512">
-  <link rel="mask-icon" href="/assets/img/logo-pa.svg" color="#28a745">
+  <link rel="mask-icon" href="/assets/img/logo-pa.svg" color="#2563eb"><!-- azul marca -->
   <meta name="theme-color" content="#0b1220">
 
   <!-- Fonts -->
@@ -107,7 +107,7 @@
     </div>
   </nav>
 
-  <!-- Hero (mantenemos el id por compatibilidad, pero ya no lo enlazamos desde el menú) -->
+  <!-- Hero -->
   <header id="hero" class="hero py-5 py-lg-6">
     <div class="container py-4">
       <div class="row align-items-center g-4">
@@ -125,8 +125,7 @@
             <div>📰 Enfoque a publicación</div>
           </div>
         </div>
-  
-        <!-- Columna derecha del hero (imagen) -->
+
         <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="300">
           <img
             src="/assets/img/cienciaytesis.png"
@@ -134,10 +133,8 @@
             title="Padrón & Asociados - Investigación Académica"
             class="img-fluid rounded shadow-sm d-block mx-auto"
             style="max-block-size:400px;inline-size:auto;border-radius:20px;object-fit:cover;aspect-ratio:4/3"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          >
+            loading="eager" fetchpriority="high" decoding="async"
+            width="1200" height="900"><!-- añadido w/h para evitar CLS -->
         </div>
       </div>
     </div>
@@ -220,7 +217,7 @@
           </div>
         </div>
         <div class="col-lg-6" data-aos="fade-left">
-          <img src="/assets/img/cienciaytesis1.gif" alt="Animación científica Padrón & Asociados" class="img-fluid rounded-3 shadow-sm d-block mx-auto" style="max-block-size:400px;object-fit:cover" loading="lazy" decoding="async">
+          <img src="/assets/img/cienciaytesis1.gif" alt="Animación científica Padrón & Asociados" class="img-fluid rounded-3 shadow-sm d-block mx-auto" style="max-block-size:400px;object-fit:cover" loading="lazy" decoding="async" width="600" height="400">
         </div>
       </div>
     </div>
@@ -266,13 +263,13 @@
       <h2 class="visually-hidden">Imágenes de soporte</h2>
       <div class="row text-center g-4">
         <div class="col-md-4">
-          <img src="/assets/img/cienciaytesis1.png" alt="Investigación Científica 1" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size:300px;inline-size:auto;object-fit:cover" loading="lazy" decoding="async">
+          <img src="/assets/img/cienciaytesis1.png" alt="Investigación Científica 1" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size:300px;inline-size:auto;object-fit:cover" loading="lazy" decoding="async" width="800" height="800">
         </div>
         <div class="col-md-4">
-          <img src="/assets/img/cienciaytesis2.png" alt="Investigación Científica 2" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size:300px;inline-size:auto;object-fit:cover" loading="lazy" decoding="async">
+          <img src="/assets/img/cienciaytesis2.png" alt="Investigación Científica 2" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size:300px;inline-size:auto;object-fit:cover" loading="lazy" decoding="async" width="800" height="800">
         </div>
         <div class="col-md-4">
-          <img src="/assets/img/cienciaytesis4.png" alt="Investigación Científica 3" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size:300px;inline-size:auto;object-fit:cover" loading="lazy" decoding="async">
+          <img src="/assets/img/cienciaytesis4.png" alt="Investigación Científica 3" class="img-fluid rounded shadow-sm mx-auto d-block" style="max-block-size:300px;inline-size:auto;object-fit:cover" loading="lazy" decoding="async" width="800" height="800">
         </div>
       </div>
     </div>
@@ -406,17 +403,16 @@
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
   
-    // Simple WhatsApp submit (form)
+    // WhatsApp submit (texto corregido a asesoría académica)
     function handleSubmit(e){
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
-      const text = encodeURIComponent(`Hola, soy ${name} (${email}). Quiero una página web. Detalles: ${message}`);
+      const text = encodeURIComponent(`Hola, soy ${name}${email ? ' ('+email+')' : ''}. Necesito asesoría académica. Detalles: ${message}`);
       const phone = '59891603340';
       window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
     }
-    // por si usas onsubmit inline
     window.handleSubmit = handleSubmit;
   </script>
 </body>
