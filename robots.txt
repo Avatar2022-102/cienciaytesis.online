@@ -1,6 +1,24 @@
 User-agent: *
 Allow: /
-Sitemap: https://cienciaytesis.online/sitemap.xml
 Disallow: /drafts/
 Disallow: /tmp/
 Disallow: /backup/
+
+# Optimización para previsualizaciones en redes sociales y mensajería
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Ubicación del índice del sitio
+Sitemap: https://cienciaytesis.online/sitemap.xml
