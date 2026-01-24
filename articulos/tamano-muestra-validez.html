@@ -78,88 +78,89 @@
       </div>
     </div>
   </header>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <style>
-      /* Estilo adicional para que la fórmula se vea igual a tu imagen */
-      .formula-box {
-        background: #f8fafc;
-        border: 1px solid #e5e7eb;
-        padding: 2.5rem;
-        border-radius: 1rem;
-        margin: 2rem 0;
-        overflow-x: auto;
-      }
-    </style>
-    
-    <main class="py-5">
-      <div class="container container-narrow prose">
-        
-        <div class="feature-card p-4 p-md-5 mb-5" data-aos="fade-up" style="border-left: 5px solid #2563eb;">
-          <p class="lead mb-0 text-slate-700">
-            Un tamaño de muestra (\(n\)) insuficiente es una de las principales causas de rechazo en revistas indexadas. No se trata solo de un número, sino de la capacidad de tu estudio para detectar un efecto real.
-          </p>
-        </div>
-    
-        <h2 class="h4 fw-bold mb-3">1. Los pilares del cálculo de muestra</h2>
-        <p>Para determinar cuántos sujetos u observaciones necesitas, debemos equilibrar cuatro fuerzas estadísticas:</p>
-        
-        <div class="row g-4 my-3">
-          <div class="col-md-6">
-            <div class="feature-card p-4 h-100 bg-white">
-              <p class="mb-0">
-                <strong>Nivel de Significancia (\(\alpha\)):</strong><br>
-                <span class="text-muted small">El riesgo de ver un efecto donde no lo hay (falso positivo). Usualmente fijado en 0.05.</span>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="feature-card p-4 h-100 bg-white">
-              <p class="mb-0">
-                <strong>Poder Estadístico (\(1-\beta\)):</strong><br>
-                <span class="text-muted small">La probabilidad de detectar un efecto si realmente existe. Se recomienda al menos 80%.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-    
-        <h2 class="h4 fw-bold mt-5 mb-3">2. La fórmula del éxito</h2>
-        <p>En estudios comparativos de medias, la relación matemática que define tu \(n\) es:</p>
-        
-        <div class="formula-box text-center shadow-sm" data-aos="zoom-in">
-          <p class="h3">
-            $$n = \frac{2(Z_{1-\alpha/2} + Z_{1-\beta})^2 \cdot \sigma^2}{\Delta^2}$$
-          </p>
-          <p class="small text-muted mt-3 mb-0">
-            Donde \(\Delta\) representa la diferencia mínima que tiene relevancia científica.
-          </p>
-        </div>
-    
-        <h2 class="h4 fw-bold mt-5 mb-3">3. Errores críticos al calcular el \(n\)</h2>
-        <ul class="list-unstyled">
-          <li class="mb-2"><strong>• Muestreo por conveniencia:</strong> Seleccionar sujetos por cercanía y no por representatividad.</li>
-          <li class="mb-2"><strong>• Ignorar la variabilidad (\(\sigma\)):</strong> No realizar una prueba piloto para estimar la desviación estándar real.</li>
-        </ul>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <style>
+    .formula-box {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      padding: 2.5rem;
+      border-radius: 1rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+    }
+    .prose h2 { margin-top: 2.5rem; }
+  </style>
+  
+  <main class="py-5">
+    <div class="container container-narrow prose">
+      
+      <div class="feature-card p-4 p-md-5 mb-5" data-aos="fade-up" style="border-left: 5px solid #2563eb;">
+        <p class="lead mb-0 text-slate-700">
+          Un tamaño de muestra (\(n\)) insuficiente es una de las principales causas de rechazo en revistas indexadas. No se trata solo de un número, sino de la capacidad de tu estudio para detectar un efecto real.
+        </p>
       </div>
   
-      <h2 class="h4">4. Recomendaciones para tu Tesis o Artículo</h2>
+      <h2 class="h4 fw-bold mb-3">1. Los pilares del cálculo de muestra</h2>
+      <p>Para determinar cuántos sujetos u observaciones necesitas, debemos equilibrar cuatro fuerzas estadísticas:</p>
+      
+      <div class="row g-4 my-3">
+        <div class="col-md-6">
+          <div class="feature-card p-4 h-100 bg-white">
+            <p class="mb-0">
+              <strong>Nivel de Significancia (\(\alpha\)):</strong><br>
+              <span class="text-muted small">El riesgo de ver un efecto donde no lo hay (falso positivo). Usualmente fijado en 0.05.</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-card p-4 h-100 bg-white">
+            <p class="mb-0">
+              <strong>Poder Estadístico (\(1-\beta\)):</strong><br>
+              <span class="text-muted small">La probabilidad de detectar un efecto si realmente existe. Se recomienda al menos 80%.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <h2 class="h4 fw-bold mt-5 mb-3">2. La fórmula del éxito</h2>
+      <p>En estudios comparativos de medias, la relación matemática que define tu \(n\) es:</p>
+      
+      <div class="formula-box text-center shadow-sm" data-aos="zoom-in">
+        <div class="h3">
+          $$n = \frac{2(Z_{1-\alpha/2} + Z_{1-\beta})^2 \cdot \sigma^2}{\Delta^2}$$
+        </div>
+        <p class="small text-muted mt-3 mb-0">
+          Donde \(\Delta\) representa la diferencia mínima que tiene relevancia científica.
+        </p>
+      </div>
+  
+      <h2 class="h4 fw-bold mt-5 mb-3">3. Errores críticos al calcular el \(n\)</h2>
+      <ul class="list-unstyled">
+        <li class="mb-2"><strong>• Muestreo por conveniencia:</strong> Seleccionar sujetos por cercanía y no por representatividad.</li>
+        <li class="mb-2"><strong>• Ignorar la variabilidad (\(\sigma\)):</strong> No realizar una prueba piloto para estimar la desviación estándar real.</li>
+      </ul>
+  
+      <h2 class="h4 fw-bold mt-5 mb-3">4. Recomendaciones para tu Tesis o Artículo</h2>
       <p>Siempre justifica tu muestra en el manuscrito siguiendo estos pasos:</p>
       <ol>
         <li>Cita la fuente de donde obtuviste la varianza esperada.</li>
         <li>Declara el software utilizado (G*Power, R, SPSS).</li>
         <li>Justifica por qué el "Tamaño del Efecto" elegido es importante para tu área de estudio.</li>
       </ol>
-
-      <div class="feature-card p-4 p-md-5 mt-5 text-center" style="background: #f8fafc;" data-aos="fade-up">
-        <h3 class="h4 mb-3">¿Necesitas un cálculo de muestra riguroso?</h3>
+  
+      <div class="feature-card p-4 p-md-5 mt-5 text-center" style="background: #f8fafc; border-top: 4px solid #2563eb;" data-aos="fade-up">
+        <h3 class="h4 mb-3 fw-bold">¿Necesitas un cálculo de muestra riguroso?</h3>
         <p>Evita que el comité evaluador cuestione tu metodología. Entregamos el cálculo justificado con simulaciones de poder listas para tu publicación.</p>
-        <a class="btn btn-brand btn-lg px-4 mt-2" href="https://wa.me/59891603340?text=Hola, necesito apoyo con el cálculo de muestra" target="_blank">Consultar por WhatsApp</a>
+        <a class="btn btn-primary btn-lg px-5 mt-2 shadow-sm" href="https://wa.me/59891603340?text=Hola, necesito apoyo con el cálculo de muestra" target="_blank">
+          Consultar por WhatsApp
+        </a>
       </div>
+  
+    </div> </main>
 
-    </div>
-  </main>
 
   <footer class="py-4 border-top">
     <div class="container d-flex flex-wrap gap-3 justify-content-between align-items-center">
