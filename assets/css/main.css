@@ -2849,3 +2849,59 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/*--------------------------------------------------------------
+# SECCIÓN SERVICIOS: NUMERACIÓN AUTOMÁTICA (Personalizado)
+--------------------------------------------------------------*/
+
+/* 1. Preparamos el contenedor para empezar a contar */
+#servicios .services-grid { 
+  counter-reset: svc; 
+}
+
+/* 2. Ajustamos la tarjeta para el diseño de la plantilla Impact */
+#servicios .feature-card {
+  position: relative; 
+  padding-top: 3.5rem !important; 
+  overflow: hidden;
+  transition: 0.3s;
+  background: var(--surface-color);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* 3. La "chapita" numerada con el color de tu marca (#008374) */
+#servicios .feature-card::before {
+  counter-increment: svc;
+  content: counter(svc, decimal-leading-zero);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 0.8rem;
+  /* Usamos el color de tu plantilla */
+  color: var(--accent-color); 
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  z-index: 1;
+}
+
+/* 4. Ajustes de espaciado interno */
+#servicios .feature-card .fs-2 { 
+  margin-top: 0.5rem; 
+}
+
+#servicios .feature-card h5 { 
+  font-weight: 700;
+  margin-top: 0.8rem;
+  color: var(--heading-color);
+}
+
+#servicios .feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
