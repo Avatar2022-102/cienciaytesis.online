@@ -600,30 +600,25 @@
   <script>
     // Inits
     AOS.init({ duration:600, easing:'ease-out-quart', once:true });
+    
+    // Año dinámico
+      const yearEl = document.getElementById('year');
+      if(yearEl) yearEl.textContent = new Date().getFullYear();
   
-    // Swiper solo si existe
-    if (document.querySelector('.mySwiper')) {
-      new Swiper('.mySwiper', {
-        spaceBetween: 24,
-        pagination: { el: '.swiper-pagination', clickable: true },
-        autoplay: { delay: 4500 }
-      });
-    }
-  
-    // Año footer
-    const y = document.getElementById('year');
-    if (y) y.textContent = new Date().getFullYear();
-  
-    // WhatsApp submit (texto corregido a asesoría académica)
-    function handleSubmit(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const text = encodeURIComponent(`Hola, soy ${name}${email ? ' ('+email+')' : ''}. Necesito asesoría académica. Detalles: ${message}`);
-      const phone = '59891603340';
-      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
-    }
+      // WhatsApp submit (texto corregido a asesoría académica)
+      // ✅ FUNCIÓN DE FORMULARIO CORREGIDA Y COMPLETA
+      function handleSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const phone = "59891603340";
+        
+        // Construye el texto para WhatsApp
+        const text = encodeURIComponent(`Hola, mi nombre es ${name}. ${message}`);
+        
+        // Abre la ventana de WhatsApp
+        window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+      }
     window.handleSubmit = handleSubmit;
   </script>
 </body>
