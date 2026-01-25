@@ -79,6 +79,36 @@
     .shadow-soft{box-shadow:0 8px 24px rgba(2,6,23,.06)}
     .rounded-2xl{border-radius:1rem}
   </style>
+
+  <!-- JSON-LD: lista de servicios -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://cienciaytesis.online/#servicios",
+    "name": "Servicios Académicos de Padrón & Asociados",
+    "description": "Consultoría integral en investigación, estadística e idiomas.",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Asesoría de Tesis",
+       "item":{"@type":"Service","name":"Asesoría de Tesis","url":"https://cienciaytesis.online/#srv-asesoria"}},
+      {"@type":"ListItem","position":2,"name":"Análisis Estadístico",
+       "item":{"@type":"Service","name":"Análisis Estadístico","url":"https://cienciaytesis.online/#srv-estadistica"}},
+      {"@type":"ListItem","position":3,"name":"Redacción y Edición",
+       "item":{"@type":"Service","name":"Redacción y Edición","url":"https://cienciaytesis.online/#srv-redaccion"}},
+      {"@type":"ListItem","position":4,"name":"Publicación",
+       "item":{"@type":"Service","name":"Publicación","url":"https://cienciaytesis.online/#srv-publicacion"}},
+      {"@type":"ListItem","position":5,"name":"Idiomas y Traducción",
+       "item":{"@type":"Service","name":"Idiomas y Traducción","url":"https://cienciaytesis.online/#srv-idiomas"}},
+      {"@type":"ListItem","position":6,"name":"Reporte de Similitud (Turnitin)",
+       "item":{"@type":"Service","name":"Reporte de Similitud (Turnitin)","url":"https://cienciaytesis.online/#srv-similitud"}},
+      {"@type":"ListItem","position":7,"name":"Comunicación Visual y Pósters",
+       "item":{"@type":"Service","name":"Comunicación Visual y Pósters","url":"https://cienciaytesis.online/#srv-visual"}},
+      {"@type":"ListItem","position":8,"name":"Análisis Cualitativo (Atlas.ti)",
+       "item":{"@type":"Service","name":"Análisis Cualitativo (Atlas.ti)","url":"https://cienciaytesis.online/#srv-cualitativo"}}
+    ]
+  }
+  </script>
+  
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -133,121 +163,136 @@
             title="Padrón & Asociados - Investigación Académica"
             class="img-fluid rounded shadow-sm d-block mx-auto"            
             style="max-block-size: 400px; inline-size: auto; border-radius: 20px; object-fit: cover;">
-
         </div>
       </div>
     </div>
   </header>
 
-  <section id="servicios" class="py-5">
+  <section id="servicios" class="py-5" aria-labelledby="servicios-title">
     <div class="container">
       <div class="text-center mb-4" data-aos="fade-up">
-        <h2 class="section-title">Nuestros Servicios Académicos</h2>
+        <h2 id="servicios-title" class="section-title">Nuestros Servicios Académicos</h2>
         <p class="subtitle">Soluciones a medida para tu tesis, artículo o proyecto de investigación.</p>
       </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
+
+      <!-- 1 -->
+      <div class="row g-4 services-grid">
+        <div class="col-md-6 col-lg-3" id="srv-asesoria" data-aos="zoom-in" data-aos-delay="0">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📚</div>
+            <div class="fs-2 mb-3" aria-hidden="true">📚</div>
             <h5>Asesoría de Tesis</h5>
-            <p class="text-secondary">Plan, cronograma, marco teórico, metodología, resultados y defensa.</p>
+            <p class="">Plan, cronograma, marco teórico, metodología, resultados y defensa.</p>
             <ul class="text-secondary small mb-3">
               <li>Estructura y normas</li>
               <li>Revisión por pares</li>
               <li>Acompañamiento 1:1</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+
+        <!-- 2 -->
+        <div class="col-md-6 col-lg-3" id="srv-estadistica" data-aos="zoom-in" data-aos-delay="100">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📈</div>
+            <div class="fs-2 mb-3" aria-hidden="true">📈</div>
             <h5>Análisis Estadístico</h5>
-            <p class="text-secondary">SPSS, R y Stata: diseño experimental, ANOVA, regresiones, PCA/CCA, RDA.</p>
+            <p class="">SPSS, R y Stata: diseño experimental, ANOVA, regresiones, PCA/CCA, RDA.</p>
             <ul class="text-secondary small mb-3">
               <li>Gráficos publicables</li>
               <li>Informe reproducible</li>
               <li>Soporte de interpretación</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+
+        <!-- 3 -->
+        <div class="col-md-6 col-lg-3" id="srv-redaccion" data-aos="zoom-in" data-aos-delay="200">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📝</div>
+            <div class="fs-2 mb-3" aria-hidden="true">📝</div>
             <h5>Redacción y Edición</h5>
-            <p class="text-secondary">Estilo científico, inglés/español, normas APA/IEEE/Vancouver.</p>
+            <p class="">Estilo científico, inglés/español, normas APA/IEEE/Vancouver.</p>
             <ul class="text-secondary small mb-3">
               <li>Corrección de estilo</li>
               <li>Formateo y referencias</li>
               <li>Respuesta a revisores</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+
+        <!-- 4 -->
+        <div class="col-md-6 col-lg-3" id="srv-publicacion" data-aos="zoom-in" data-aos-delay="300">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📰</div>
+            <div class="fs-2 mb-3" aria-hidden="true">📰</div>
             <h5>Publicación</h5>
-            <p class="text-secondary">Selección de revista, carta al editor, check de requisitos y envío.</p>
+            <p class="">Selección de revista, carta al editor, check de requisitos y envío.</p>
             <ul class="text-secondary small mb-3">
               <li>Scopus / WoS</li>
               <li>Turnitin / antiplagio</li>
               <li>Checklist editorial</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+
+        <!-- 5 -->
+        <div class="col-md-6 col-lg-3" id="srv-idiomas" data-aos="zoom-in" data-aos-delay="400">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">🌐</div>
+            <div class="fs-2 mb-3" aria-hidden="true">🌐</div>
             <h5>Idiomas y Traducción</h5>
-            <p class="text-secondary small">Traducción técnica y revisión de manuscritos en inglés y portugués.</p>
+            <p class="">Traducción técnica y revisión de manuscritos en inglés y portugués.</p>
             <ul class="text-secondary small mb-3">
-              <li>Español (Estilo y Normas APA)</li>
-              <li>Inglés técnico (WOS/Scopus)</li>
+              <li>Español (APA / estilo)</li>
+              <li>Inglés técnico (WoS / Scopus)</li>
               <li>Portugués académico</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
+
+        <!-- 6 -->
+        <div class="col-md-6 col-lg-3" id="srv-similitud" data-aos="zoom-in" data-aos-delay="500">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">🔍</div>
+            <div class="fs-2 mb-3" aria-hidden="true">🔍</div>
             <h5>Reporte de Similitud</h5>
-            <p class="text-secondary small">Escaneo con Turnitin para garantizar la originalidad de tu trabajo.</p>
+            <p class="">Escaneo con Turnitin para garantizar la originalidad.</p>
             <ul class="text-secondary small mb-3">
               <li>Detección de IA</li>
               <li>Citas mal referenciadas</li>
               <li>Sugerencias de parafraseo</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+
+        <!-- 7 -->
+        <div class="col-md-6 col-lg-3" id="srv-visual" data-aos="zoom-in" data-aos-delay="600">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">🖼️</div>
+            <div class="fs-2 mb-3" aria-hidden="true">🖼️</div>
             <h5>Comunicación Visual</h5>
-            <p class="text-secondary small">Diseño de pósters científicos y diapositivas de alto impacto para defensas.</p>
+            <p class="">Pósters científicos y diapositivas de alto impacto para defensas.</p>
             <ul class="text-secondary small mb-3">
               <li>Infografías de datos</li>
               <li>Diseño de posters (A0)</li>
               <li>Guion de defensa</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="700">
+
+        <!-- 8 -->
+        <div class="col-md-6 col-lg-3" id="srv-cualitativo" data-aos="zoom-in" data-aos-delay="700">
           <div class="feature-card p-4 h-100">
-            <div class="fs-2 mb-3">📋</div>
+            <div class="fs-2 mb-3" aria-hidden="true">📋</div>
             <h5>Análisis Cualitativo</h5>
-            <p class="text-secondary small">Procesamiento de entrevistas y grupos focales mediante software especializado.</p>
+            <p class="">Procesamiento de entrevistas y grupos focales con software especializado.</p>
             <ul class="text-secondary small mb-3">
-              <li>Uso de Atlas.ti / NVivo</li>
+              <li>Atlas.ti / NVivo</li>
               <li>Categorización y redes</li>
               <li>Triangulación de datos</li>
             </ul>
-            <a class="stretched-link" href="/#contacto">Solicitar</a>
+            <a class="stretched-link" href="#contacto">Solicitar</a>
           </div>
         </div>
       </div>
