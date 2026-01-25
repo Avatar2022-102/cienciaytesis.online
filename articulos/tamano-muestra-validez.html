@@ -25,13 +25,25 @@
     body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial; color:#1e293b}
     .container-narrow{max-inline-size:980px}
     .muted{color:#64748b}
-    /* Gradiente ajustado para barra superior reducida */
-    .hero-mini{background:linear-gradient(180deg,#0b1220, #0b1220 75%, #ffffff 75%)}
+    /* Estilo del Header unificado */
+    .hero-mini{background:linear-gradient(180deg,#0b1220, #0b1220 70%, #ffffff 70%)}
     .hero-card{border-radius:1rem; box-shadow:0 12px 30px rgba(2,6,23,.08)}
     .feature-card{border:1px solid #e5e7eb; border-radius:1rem; background:#fff; box-shadow:0 10px 30px rgba(2,6,23,.06)}
     .prose h2{margin-top:2.5rem; font-weight:700; color:#0f172a; border-left:4px solid #2563eb; padding-left:1rem}
-    .formula-box{background:#f8fafc; border:1px solid #e2e8f0; border-radius:0.75rem; padding:2.5rem; margin:1.5rem 0; overflow-x:auto}
+    .formula-box{background:#f8fafc; border:1px solid #e2e8f0; border-radius:1rem; padding:2.5rem; margin:1.5rem 0; overflow-x:auto}
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"El tamaño de la muestra y la validez de tu investigación",
+    "author":{"@type":"Organization","name":"Padrón & Asociados"},
+    "publisher":{"@type":"Organization","name":"Padrón & Asociados"},
+    "datePublished":"2026-01-24",
+    "image":"https://cienciaytesis.online/assets/img/og-muestra.png"
+  }
+  </script>
 </head>
 <body>
 
@@ -88,31 +100,64 @@
         <div class="row g-4 my-3">
           <div class="col-md-6">
             <div class="feature-card p-4 h-100">
-              <strong>Nivel de Significancia (\(\alpha\)):</strong><br>
-              <span class="text-muted small">El riesgo de falso positivo. Usualmente fijado en 0.05.</span>
+              <p class="mb-0">
+                <strong>Nivel de Significancia (\(\alpha\)):</strong><br>
+                <span class="text-muted small">El riesgo de ver un efecto donde no lo hay (falso positivo). Usualmente fijado en 0.05.</span>
+              </p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="feature-card p-4 h-100">
-              <strong>Poder Estadístico (\(1-\beta\)):</strong><br>
-              <span class="text-muted small">Probabilidad de detectar un efecto real. Recomendado 80%.</span>
+              <p class="mb-0">
+                <strong>Poder Estadístico (\(1-\beta\)):</strong><br>
+                <span class="text-muted small">La probabilidad de detectar un efecto si realmente existe. Se recomienda al menos 80%.</span>
+              </p>
             </div>
           </div>
         </div>
 
         <h2 class="h4">2. La fórmula del éxito</h2>
-        <div class="formula-box text-center shadow-sm">
+        <p>En estudios comparativos de medias, la relación matemática que define tu \(n\) es:</p>
+        
+        
+
+        <div class="formula-box text-center shadow-sm" data-aos="zoom-in">
           <div class="h3">
             $$n = \frac{2(Z_{1-\alpha/2} + Z_{1-\beta})^2 \cdot \sigma^2}{\Delta^2}$$
           </div>
+          <p class="small text-muted mt-3 mb-0">
+            Donde \(\Delta\) representa la diferencia mínima que tiene relevancia científica.
+          </p>
         </div>
 
-        <h2 class="h4">3. Recomendaciones finales</h2>
-        <p>Siempre justifica tu muestra citando la fuente de la varianza y el software utilizado (G*Power, R o SPSS).</p>
+        <h2 class="h4">3. Errores críticos al calcular el \(n\)</h2>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <div class="d-flex gap-2">
+              <span>•</span>
+              <div><strong>Muestreo por conveniencia:</strong> Seleccionar sujetos por cercanía y no por representatividad.</div>
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="d-flex gap-2">
+              <span>•</span>
+              <div><strong>Ignorar la variabilidad (\(\sigma\)):</strong> No realizar una prueba piloto para estimar la desviación estándar real.</div>
+            </div>
+          </li>
+        </ul>
 
-        <div class="feature-card p-4 p-md-5 mt-5 text-center" style="background: #f8fafc; border-top: 4px solid #2563eb;">
+        <h2 class="h4">4. Recomendaciones para tu Tesis o Artículo</h2>
+        <p>Siempre justifica tu muestra en el manuscrito siguiendo estos pasos:</p>
+        <ol>
+          <li class="mb-2">Cita la fuente de donde obtuviste la varianza esperada.</li>
+          <li class="mb-2">Declara el software utilizado (G*Power, R, SPSS).</li>
+          <li class="mb-2">Justifica por qué el "Tamaño del Efecto" elegido es importante para tu área de estudio.</li>
+        </ol>
+
+        <div class="feature-card p-4 p-md-5 mt-5 text-center" style="background: #f8fafc; border-top: 4px solid #2563eb;" data-aos="fade-up">
           <h3 class="h4 mb-3 fw-bold">¿Necesitas un cálculo de muestra riguroso?</h3>
-          <a class="btn btn-primary btn-lg px-5 shadow-sm" href="https://wa.me/59891603340" target="_blank">
+          <p>Evita que el comité evaluador cuestione tu metodología. Entregamos el cálculo justificado con simulaciones de poder listas para tu publicación.</p>
+          <a class="btn btn-primary btn-lg px-5 mt-2 shadow-sm" href="https://wa.me/59891603340?text=Hola, necesito apoyo con el cálculo de muestra" target="_blank">
             Consultar por WhatsApp
           </a>
         </div>
