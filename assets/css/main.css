@@ -2901,6 +2901,39 @@ section,
   color: var(--heading-color);
 }
 
+/*--------------------------------------------------------------
+# Accesibilidad: Skip Link (Salto al contenido)
+--------------------------------------------------------------*/
+.visually-hidden-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.visually-hidden-focusable:focus {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 12px 25px;
+  background-color: var(--accent-color); /* Usa tu color verde #008374 */
+  color: #ffffff;
+  font-family: var(--nav-font);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  clip: auto;
+}
+
 #servicios .feature-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent-color);
