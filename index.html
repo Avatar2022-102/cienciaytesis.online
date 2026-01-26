@@ -82,6 +82,16 @@
     footer a:hover{color:#fff}
     .shadow-soft{box-shadow:0 8px 24px rgba(2,6,23,.06)}
     .rounded-2xl{border-radius:1rem}
+
+    .video-cover { background:#000; cursor:pointer; }
+    .video-play-btn {
+      position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+      width:80px; height:80px; border-radius:50%; background:var(--brand);
+      color:#fff; display:grid; place-items:center; font-size:32px;
+      box-shadow:0 10px 30px rgba(37,99,235,.4); transition:all .3s ease;
+    }
+    .video-cover:hover .video-play-btn { transform:translate(-50%, -50%) scale(1.1); background:#1e40af; }
+    @media (max-width: 576px){ .video-play-btn{ width:60px; height:60px; font-size:24px; } }
   </style>
 
   <!-- JSON-LD: lista de servicios -->
@@ -95,7 +105,7 @@
     "url":"https://cienciaytesis.online/",
     "logo":"https://cienciaytesis.online/assets/img/favicon-180.png",
     "image":"https://cienciaytesis.online/assets/img/og-home.png?v=2026-01-24b",
-    "sameAs":["https://www.instagram.com/richardrodriguez.p"],
+    "sameAs":["https://www.instagram.com/cienciaytesis"],
     "areaServed":["UY","AR","CL","ES","MX"],
     "availableLanguage":["es","en"],
     "contactPoint":{
@@ -134,7 +144,40 @@
     ]
   }
   </script>
-  
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Cómo trabajamos — De complejidad a claridad",
+    "description": "Proceso de Padrón & Asociados: diagnóstico, plan de vuelo, mentoría 1:1, control de calidad y preparación para la defensa.",
+    "thumbnailUrl": ["https://i.ytimg.com/vi/osfMN4kwzQU/hqdefault.jpg"],
+    "uploadDate": "2026-01-25",
+    "duration": "PT4M52S", 
+    "embedUrl": "https://www.youtube-nocookie.com/embed/osfMN4kwzQU",
+    "contentUrl": "https://www.youtube.com/watch?v=osfMN4kwzQU"
+  }
+  </script>
+
+  <script>
+    // Reemplaza la portada por el iframe de YouTube al hacer clic
+    document.addEventListener('click', function (e) {
+      const cover = e.target.closest('.video-cover');
+      if (!cover) return;
+      e.preventDefault();
+      const id = cover.getAttribute('data-ytid');
+      const iframe = document.createElement('iframe');
+      iframe.className = 'w-100 h-100';
+      iframe.title = 'Tu éxito, paso a paso — Padrón & Asociados';
+      iframe.loading = 'lazy';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+      cover.replaceWith(iframe);
+    });
+  </script>
+ 
 </head>
 <body>
   <a href="#servicios" class="visually-hidden-focusable">Saltar al contenido principal</a>
@@ -454,6 +497,30 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-trabajamos" class="py-5 bg-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center" data-aos="fade-up">
+          <h2 class="section-title mb-4">¿Cómo transformamos tu investigación?</h2>
+  
+          <div class="ratio ratio-16x9 shadow-lg rounded-4 overflow-hidden border">
+            <a class="video-cover d-block position-relative h-100"
+               href="https://youtu.be/osfMN4kwzQU" data-ytid="osfMN4kwzQU" aria-label="Reproducir video de presentación">
+              <img src="https://i.ytimg.com/vi/osfMN4kwzQU/hqdefault.jpg"
+                   alt="Miniatura del video explicativo Padrón & Asociados"
+                   class="w-100 h-100" style="object-fit:cover;">
+              <div class="video-play-btn" aria-hidden="true">▶</div>
+            </a>
+          </div>
+  
+          <p class="mt-4 subtitle px-lg-5">
+            Nuestro <strong>acompañamiento integral</strong> convierte la complejidad en claridad y te guía hasta la publicación y la defensa académica.
+          </p>
         </div>
       </div>
     </div>
